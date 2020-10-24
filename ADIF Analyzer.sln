@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{340F4019-F7F1-4D90-A738-AC4B4300A987}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\ADIF Analyzer Revision History.txt = Solution Items\ADIF Analyzer Revision History.txt
+		Solution Items\ADIF Analyzer.docx = Solution Items\ADIF Analyzer.docx
+		Solution Items\ADIF Analyzer.iss = Solution Items\ADIF Analyzer.iss
+		Solution Items\CountryCodes.txt = Solution Items\CountryCodes.txt
+		Solution Items\WorldMap.jpg = Solution Items\WorldMap.jpg
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADIF Analyzer", "ADIF Analyzer\ADIF Analyzer.csproj", "{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Debug|x86.ActiveCfg = Debug|x86
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Debug|x86.Build.0 = Debug|x86
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Release|x86.ActiveCfg = Release|x86
+		{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2F3F9B1-28BF-4A50-B09E-CC29B1EF5631}
+	EndGlobalSection
+EndGlobal

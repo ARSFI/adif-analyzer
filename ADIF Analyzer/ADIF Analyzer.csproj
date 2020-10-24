@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5C08B15-1CF5-47E9-B1FE-C31025BDCEF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ADIF_Analyzer</RootNamespace>
+    <AssemblyName>ADIF Analyzer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ADIF Analyzer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.14.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.14.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADIF.cs" />
+    <Compile Include="ChartBand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartBand.Designer.cs">
+      <DependentUpon>ChartBand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartBearing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartBearing.Designer.cs">
+      <DependentUpon>ChartBearing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDayOfWeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDayOfWeek.Designer.cs">
+      <DependentUpon>ChartDayOfWeek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartFrequency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartFrequency.Designer.cs">
+      <DependentUpon>ChartFrequency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartHourOfDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartHourOfDay.Designer.cs">
+      <DependentUpon>ChartHourOfDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartMap.Designer.cs">
+      <DependentUpon>ChartMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartMode.Designer.cs">
+      <DependentUpon>ChartMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartMonth.Designer.cs">
+      <DependentUpon>ChartMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartRange.Designer.cs">
+      <DependentUpon>ChartRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAutoupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAutoupdate.Designer.cs">
+      <DependentUpon>DialogAutoupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="GridSquareToLatLong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridSquareToLatLong.Designer.cs">
+      <DependentUpon>GridSquareToLatLong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INIFile.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableBand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableBand.Designer.cs">
+      <DependentUpon>TableBand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableCountry.Designer.cs">
+      <DependentUpon>TableCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableFrequency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableFrequency.Designer.cs">
+      <DependentUpon>TableFrequency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableFrequencyMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableFrequencyMode.Designer.cs">
+      <DependentUpon>TableFrequencyMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableMode.Designer.cs">
+      <DependentUpon>TableMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableRecentCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableRecentCount.Designer.cs">
+      <DependentUpon>TableRecentCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableRecords.Designer.cs">
+      <DependentUpon>TableRecords.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChartBand.resx">
+      <DependentUpon>ChartBand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartBearing.resx">
+      <DependentUpon>ChartBearing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDayOfWeek.resx">
+      <DependentUpon>ChartDayOfWeek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFrequency.resx">
+      <DependentUpon>ChartFrequency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartHourOfDay.resx">
+      <DependentUpon>ChartHourOfDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartMap.resx">
+      <DependentUpon>ChartMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartMode.resx">
+      <DependentUpon>ChartMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartMonth.resx">
+      <DependentUpon>ChartMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartRange.resx">
+      <DependentUpon>ChartRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAutoupdate.resx">
+      <DependentUpon>DialogAutoupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridSquareToLatLong.resx">
+      <DependentUpon>GridSquareToLatLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableBand.resx">
+      <DependentUpon>TableBand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableCountry.resx">
+      <DependentUpon>TableCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableFrequency.resx">
+      <DependentUpon>TableFrequency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableFrequencyMode.resx">
+      <DependentUpon>TableFrequencyMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableMode.resx">
+      <DependentUpon>TableMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableRecentCount.resx">
+      <DependentUpon>TableRecentCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableRecords.resx">
+      <DependentUpon>TableRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADIF Analyzer.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,33 @@
+            Revision History for ADIF Analyzer
+
+Rev 1.0.7.0	Jul 2, 2020
+	Add a column to the ADIF records table to display the last command received from the client.
+	
+Rev 1.0.6.0	May 27, 2020
+	Fix a problem calculating connection duration if the connection crossed midnight.
+	
+Rev 1.0.5.0	May 12, 2020
+	Report Winmor 1600/500, ARDOP 2000/500, and Vara 2300/500 separately.
+	When a connection point is clicked on the map, mark it as selected.
+	
+Rev 1.0.4.0	Apr 27, 2020
+	Add a chart and table to show connections by frequency.
+	Add option to Settings screen to use UTC time rather than local time.
+	
+Rev 1.0.3.0	Jan 17, 2020
+	Added a new display which is a map showing points where connections were located.  You can click a connection point to get information about it.
+	Fix a problem parsing ADIF records that don't have band fields.
+	
+Rev 1.0.2.0	Jan 10, 2020
+	Add table to display count of connections by country.
+	Add a column to the ADIF Records table to display country name.
+	Replace the grid square column in ADIF Records with range and bearing columns.
+	Reduce the number of scans of ADIF files.
+	Fix a bug with ADIF folder names getting shifted down in the Settings screen.
+	Change the frequency display to kHz
+	Fix bug sorting ADIF records for the ADIF Records table screen.
+	
+Rev 1.0.1.0	Jan 7, 2020
+	Initial version released for testing.
+	
+
