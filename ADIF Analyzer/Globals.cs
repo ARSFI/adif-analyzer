@@ -88,7 +88,7 @@ namespace ADIF_Analyzer
         public static int intMaxMapContacts = 100;
         public static double KmToMiles = 0.621371;      /* Scale km to miles */
         public static bool blnTimeZoneUTC = false;
-
+        public static string strDecimalSeparator = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
         private static Encoding objISOEncoder = Encoding.GetEncoding("iso-8859-1");
 
         /*----------------------------------------------------------------------------
@@ -129,6 +129,37 @@ namespace ADIF_Analyzer
             }
         }
 
+        /*-------------------------------------------------------------------------------
+         * Convert a string to a double value handling either period or comma decimal separator.
+         */
+        public static double ConvertToDouble(string strValue)
+        {
+            double dblValue = 0.0;
+            try
+            {
+                dblValue = Convert.ToDouble(FixDecimalSeparator(strValue));
+            }
+            catch
+            {
+            }
+            return dblValue;
+        }
+        /*-----------------------------------------------------------------------------
+         * Convert period to comma or comma to period to match the national decimal separator character.
+         */
+        public static string FixDecimalSeparator(string strValue)
+        {
+            try
+            {
+                strValue = strValue.Replace(".", strDecimalSeparator);
+                strValue = strValue.Replace(",", strDecimalSeparator);
+            }
+            catch
+            {
+
+            }
+            return strValue;
+        }
 
         /*------------------------------------------------------------------
          * Convert string to byte array.

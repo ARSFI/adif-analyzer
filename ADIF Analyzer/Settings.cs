@@ -170,7 +170,7 @@ namespace ADIF_Analyzer
             string strValue = txtLatitude.Text.Trim();
             try
             {
-                Globals.objStationLocation.dblLatitude = Convert.ToDouble(strValue);
+                Globals.objStationLocation.dblLatitude = Globals.ConvertToDouble(strValue);
                 Globals.objINIFile.WriteDouble("Main", "RMS Latitude", Globals.objStationLocation.dblLatitude);
             }
             catch
@@ -182,7 +182,7 @@ namespace ADIF_Analyzer
             strValue = txtLongitude.Text.Trim();
             try
             {
-                Globals.objStationLocation.dblLongitude = Convert.ToDouble(strValue);
+                Globals.objStationLocation.dblLongitude = Globals.ConvertToDouble(strValue);
                 Globals.objINIFile.WriteDouble("Main", "RMS Longitude", Globals.objStationLocation.dblLongitude);
             }
             catch

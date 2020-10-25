@@ -385,7 +385,7 @@ namespace ADIF_Analyzer
             if (strField == null) return null;
             try
             {
-                objAdif.dblFrequency = 1000.0 * Convert.ToDouble(strField);
+                objAdif.dblFrequency = 1000.0 * Globals.ConvertToDouble(strField);
             }
             catch
             {
