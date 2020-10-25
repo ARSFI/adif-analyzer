@@ -1,6 +1,6 @@
             Revision History for ADIF Analyzer
 
-Rev 1.0.7.1
+Rev 1.0.8.0	Oct 25, 2020
 	Fix a problem handling decimal frequency values in countries where comma is the decimal separator.
 
 Rev 1.0.7.0	Jul 2, 2020

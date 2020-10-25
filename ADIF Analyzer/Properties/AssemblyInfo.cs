@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ADIF Analyzer")]
 [assembly: AssemblyDescription("Analyze ADIF files genered by RMS Trimode and display charts and tables")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Amateur Radio Safety Foundation, inc.  (Winlink)")]
+[assembly: AssemblyCompany("Amateur Radio Safety Foundation, inc.  (Winlink)  Written by Phil Sherrod (W4PHS)")]
 [assembly: AssemblyProduct("ADIF Analyzer")]
 [assembly: AssemblyCopyright("Copyright ©  2020 ARSFi.")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.7.0")]
-[assembly: AssemblyFileVersion("1.0.7.0")]
+[assembly: AssemblyVersion("1.0.8.0")]
+[assembly: AssemblyFileVersion("1.0.8.0")]
