@@ -161,6 +161,44 @@ namespace ADIF_Analyzer
             return strValue;
         }
 
+        /*-------------------------------------------------------------------------------
+         * Get the integer value of a DataGridView cell.
+         */
+        public static int CellValue(object CellValue)
+        {
+            int intValue = 0;
+            try
+            {
+                if (CellValue.ToString() != "")
+                {
+                    intValue = Convert.ToInt32(CellValue);
+                }
+            }
+            catch
+            {
+            }
+            return intValue;
+        }
+
+        /*-------------------------------------------------------------------------------
+         * Get the double value of a DataGridView cell.
+         */
+        public static double CellValueDouble(object CellValue)
+        {
+            double dblValue = 0.0;
+            try
+            {
+                if (CellValue.ToString() != "")
+                {
+                    dblValue = Convert.ToDouble(CellValue);
+                }
+            }
+            catch
+            {
+            }
+            return dblValue;
+        }
+
         /*------------------------------------------------------------------
          * Convert string to byte array.
          */

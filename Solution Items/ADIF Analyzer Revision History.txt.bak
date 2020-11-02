@@ -1,8 +1,5 @@
             Revision History for ADIF Analyzer
 
-Rev 1.0.9.0	Nov 1, 2020
-	Fix problems sorting the Range and Bearing columns of the ADIF records table.
-	
 Rev 1.0.8.0	Oct 25, 2020
 	Fix a problem handling decimal frequency values in countries where comma is the decimal separator.
 

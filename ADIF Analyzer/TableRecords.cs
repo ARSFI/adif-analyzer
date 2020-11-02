@@ -16,6 +16,9 @@ namespace ADIF_Analyzer
         public TableRecords()
         {
             InitializeComponent();
+            /* Set custom sort routine */
+            dataGridView1.SortCompare += new DataGridViewSortCompareEventHandler(
+            this.dataGridView1_SortCompare);
         }
 
         /*-----------------------------------------------------------------------------------
@@ -78,8 +81,8 @@ namespace ADIF_Analyzer
              * Populate the table.
              */
             foreach (AdifRecord objRec in lstRec)
-            { 
-               DataGridViewRow objRow = new DataGridViewRow();
+            {
+                DataGridViewRow objRow = new DataGridViewRow();
                 objRow.CreateCells(dataGridView1);
                 if (Globals.blnTimeZoneUTC)
                 {
@@ -100,11 +103,11 @@ namespace ADIF_Analyzer
                 objRow.Cells[ColIndex("Band")].Value = objRec.strBand;
                 if (objRec.strGridSquare != "")
                 {
-                    RangeBearing objRange = Globals.RangeAndBearing(Globals.objStationLocation,objRec.Location, Globals.blnRangeMiles);
+                    RangeBearing objRange = Globals.RangeAndBearing(Globals.objStationLocation, objRec.Location, Globals.blnRangeMiles);
                     if (objRange.blnValid)
                     {
-                        objRow.Cells[ColIndex("Range")].Value = (int)(0.5 + objRange.dblRange);
-                        objRow.Cells[ColIndex("Bearing")].Value = (int)(0.5 + objRange.dblBearing);
+                        objRow.Cells[ColIndex("Range")].Value = ((int)(0.5 + objRange.dblRange)).ToString();
+                        objRow.Cells[ColIndex("Bearing")].Value = ((int)(0.5 + objRange.dblBearing)).ToString();
                     }
                     else
                     {
@@ -123,6 +126,28 @@ namespace ADIF_Analyzer
             /* Sort the rows in descending order of start date/time */
             dataGridView1.Columns[0].HeaderCell.SortGlyphDirection = SortOrder.Descending;
             this.Cursor = Cursors.Default;
+            return;
+        }
+
+        /*---------------------------------------------------------------------------
+         * Custom sort compare routine.
+         */
+        private void dataGridView1_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+        {
+            if (e.Column.Name == "Range" || e.Column.Name == "Bearing")
+            {
+                e.SortResult = Globals.CellValue(e.CellValue1) - Globals.CellValue(e.CellValue2);
+            }
+            else if (e.Column.Name == "Frequency")
+            {
+                e.SortResult = (int)(Globals.CellValueDouble(e.CellValue1) - Globals.CellValueDouble(e.CellValue2));
+            }
+            else
+            {
+                e.SortResult = System.String.Compare(
+                    e.CellValue1.ToString(), e.CellValue2.ToString());
+            }
+            e.Handled = true;
             return;
         }
 
